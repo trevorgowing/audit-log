@@ -1,2 +1,2 @@
-# big-brother
+# Big Brother
 Simple user activity monitor
