@@ -1,2 +1,2 @@
 # Big Brother
-Simple user activity monitor
+Simple user activity logger
