@@ -9,4 +9,5 @@ Simple user activity logger
 * [Securing a Web Application](http://spring.io/guides/gs/securing-web/)
 * [Accessing Data with MongoDB](http://spring.io/guides/gs/accessing-data-mongodb/)
 * [Converting a Spring Boot JAR Application to a WAR](http://spring.io/guides/gs/convert-jar-to-war/)
-
+* [Spring Boot with Docker](http://spring.io/guides/gs/spring-boot-docker/)
+* [Gradle Tutorial Series](http://rominirani.com/2014/07/28/gradle-tutorial-series-an-overview/)
