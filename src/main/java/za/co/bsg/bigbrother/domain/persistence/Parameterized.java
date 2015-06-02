@@ -7,9 +7,11 @@ import java.util.Map;
  */
 public interface Parameterized {
 
+    Object getParameter(String key);
+
+    void putParameter(String key, Object value);
+
     Map<String, Object> getParameters();
 
     void setParameters(Map<String, Object> parameters);
-
-    void putParameter(String key, Object value);
 }

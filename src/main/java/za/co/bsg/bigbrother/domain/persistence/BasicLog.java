@@ -1,38 +1,20 @@
 package za.co.bsg.bigbrother.domain.persistence;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.time.Instant;
 import java.util.Objects;
 
-@Document(collection = "logs")
+@Document(indexName = "logs")
 public class BasicLog {
-
-    private String sourceApplication;
-
-    private String userId;
 
     private String action;
 
     private Instant actionInstant;
 
+    private String actionedByUserIdentifier;
+
     public BasicLog() {}
-
-    public String getSourceApplication() {
-        return sourceApplication;
-    }
-
-    public void setSourceApplication(String sourceApplication) {
-        this.sourceApplication = sourceApplication;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 
     public String getAction() {
         return action;
@@ -50,26 +32,32 @@ public class BasicLog {
         this.actionInstant = actionInstant;
     }
 
+    public String getActionedByUserIdentifier() {
+        return actionedByUserIdentifier;
+    }
+
+    public void setActionedByUserIdentifier(String actionedByUserIdentifier) {
+        this.actionedByUserIdentifier = actionedByUserIdentifier;
+    }
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof BasicLog)) return false;
-        BasicLog basicLog = (BasicLog) o;
-        return Objects.equals(getSourceApplication(), basicLog.getSourceApplication()) &&
-                Objects.equals(getUserId(), basicLog.getUserId()) &&
-                Objects.equals(getAction(), basicLog.getAction()) &&
-                Objects.equals(getActionInstant(), basicLog.getActionInstant());
+    public boolean equals(Object objectToCompareTo) {
+        if (this == objectToCompareTo) return true;
+        if (!(objectToCompareTo instanceof BasicLog)) return false;
+        BasicLog basicLogToCompareTo = (BasicLog) objectToCompareTo;
+        return Objects.equals(getActionedByUserIdentifier(), basicLogToCompareTo.getActionedByUserIdentifier()) &&
+                Objects.equals(getAction(), basicLogToCompareTo.getAction()) &&
+                Objects.equals(getActionInstant(), basicLogToCompareTo.getActionInstant());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSourceApplication(), getUserId(), getAction(), getActionInstant());
+        return Objects.hash(getActionedByUserIdentifier(), getAction(), getActionInstant());
     }
 
     @Override
     public String toString() {
-        return "BasicLog{" + "sourceApplication='" + sourceApplication + '\'' +
-                ", userId='" + userId + '\'' +
+        return "BasicLog{" + "userId='" + actionedByUserIdentifier + '\'' +
                 ", action='" + action + '\'' +
                 ", actionInstant=" + actionInstant + '}';
     }

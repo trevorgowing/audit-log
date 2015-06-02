@@ -5,7 +5,7 @@ package za.co.bsg.bigbrother.domain.persistence;
  */
 public interface Tenantized {
 
-    String getTenantId();
+    String getTenantIdentifier();
 
-    void setTenantId(String tenantId);
+    void setTenantIdentifier(String tenantIdentifier);
 }
