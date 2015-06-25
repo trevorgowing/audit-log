@@ -1,4 +1,4 @@
-package za.co.bsg.bigbrother.domain.persistence;
+package com.trevorgowing.auditlog.domain.persistence;
 
 import java.util.HashMap;
 import java.util.Map;

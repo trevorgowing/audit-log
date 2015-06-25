@@ -1,4 +1,4 @@
-package za.co.bsg.bigbrother.domain.persistence;
+package com.trevorgowing.auditlog.domain.persistence;
 
 import org.springframework.data.elasticsearch.annotations.Document;
 

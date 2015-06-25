@@ -1,6 +1,6 @@
-package za.co.bsg.bigbrother.domain.persistence;
+package com.trevorgowing.auditlog.domain.persistence;
 
-public class TenantizedParameterizedLog extends BasicLog implements Tenantized {
+public class TenantizedLog implements Tenantized {
 
     private String tenantIdentifier;
 

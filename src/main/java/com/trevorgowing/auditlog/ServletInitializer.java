@@ -1,4 +1,4 @@
-package za.co.bsg.bigbrother;
+package com.trevorgowing.auditlog;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
