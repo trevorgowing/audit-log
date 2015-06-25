@@ -5,7 +5,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 
 repositories {
-    mavenCentral()
+    jCenter()
 }
 
 configurations {
@@ -34,7 +34,7 @@ buildscript {
 }
 
 war {
-    baseName = 'bigbrother'
+    baseName = 'audit-log'
     version = '0.1'
 }
 
