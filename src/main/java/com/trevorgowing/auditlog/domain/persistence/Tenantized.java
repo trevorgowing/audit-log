@@ -1,7 +1,7 @@
 package com.trevorgowing.auditlog.domain.persistence;
 
 /**
- * Defines a {@link BasicLog} which is in addition tenantized;
+ * Defines a {@link SimpleLog} which is in addition tenantized;
  */
 public interface Tenantized {
 

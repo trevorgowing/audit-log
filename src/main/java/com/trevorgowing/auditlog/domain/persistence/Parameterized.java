@@ -3,7 +3,7 @@ package com.trevorgowing.auditlog.domain.persistence;
 import java.util.Map;
 
 /**
- * Defines a {@link BasicLog} which has in addition a {@link Map} of parameters;
+ * Defines a {@link SimpleLog} which has in addition a {@link String} to {@link Object} {@link Map} of parameters;
  */
 public interface Parameterized {
 
