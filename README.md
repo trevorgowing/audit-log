@@ -1,5 +1,5 @@
-# Big Brother
-Simple user activity logger
+# Audit Log
+Simple application used to record and interigate user beahviour
 
 ## Useful Links
 
