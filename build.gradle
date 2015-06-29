@@ -5,7 +5,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 
 repositories {
-    jCenter()
+    mavenCentral()
 }
 
 configurations {

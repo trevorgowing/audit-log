@@ -1,5 +1,6 @@
 package com.trevorgowing.auditlog.domain.persistence;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.time.Instant;
@@ -8,6 +9,8 @@ import java.util.Objects;
 @Document(indexName = "logs")
 public class SimpleLog {
 
+    @Id
+    private Long id;
     private String action;
     private Instant actionInstant;
     private String actionedByUserIdentifier;
@@ -18,6 +21,14 @@ public class SimpleLog {
         this.action = action;
         this.actionInstant = actionInstant;
         this.actionedByUserIdentifier = actionedByUserIdentifier;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getAction() {
